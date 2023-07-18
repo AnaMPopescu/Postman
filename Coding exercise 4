@@ -1,0 +1,36 @@
+Coding exercise 4
+
+Open the following URL in a new Postman request:
+
+https://run.mocky.io/v3/4322dcfc-07cd-4ebd-a45b-8e832a5abf7d
+
+
+
+In Postman, navigate the given data structure and get the value of the property PostalCode:
+
+
+
+const response = pm.response.json();
+const firstPostalCode = FIXME;
+console.log(firstPostalCode);
+
+
+Once you have found the path to the property and can see in the Postman console the value 12345, go to the coding exercise.
+
+
+
+In the function getFirstPostalCode(), use the variable named firstPostalCode and assign it the value of the path to the property PostalCode (copy the same line from Postman).
+
+
+
+index.js
+
+function getFirstPostalCode(response) {
+    // IMPORTANT:
+    // 1. Make sure to use the function parameter response
+    // 2. Set the variable firstPostalCode with the correct path to the property
+    const firstPostalCode = response[0].Item01.Data[0].Results[0].Contact.Address.PostalCode;
+    
+    // 3. DO NOT remove the return statement! 
+    return firstPostalCode;
+}
